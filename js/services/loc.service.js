@@ -26,7 +26,7 @@ function getWeather(locs) {
     console.log('Getting Weather:');
     // console.log(locs)
     // console.log('http://api.openweathermap.org/data/2.5/weather?lat=' + locs.lat + '&lon=' + locs.lng + '&APPID=' + WEATHER_API)
-    return axios.get('http://api.openweathermap.org/data/2.5/weather?lat=' + locs.lat + '&lon=' + locs.lng + '&APPID=' + WEATHER_API+'&units=metric')
+    return axios.get('https://api.openweathermap.org/data/2.5/weather?lat=' + locs.lat + '&lon=' + locs.lng + '&APPID=' + WEATHER_API+'&units=metric')
     .then(res => res.data)
 }
 
