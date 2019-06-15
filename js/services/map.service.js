@@ -9,10 +9,10 @@ export default {
 var map;
 
 function initMap(lat = 32.0672529, lng = 34.7687332) {
-    console.log('InitMap'); 
+    // console.log('InitMap'); 
     return _connectGoogleApi()
     .then(() => {
-        console.log('google available');
+        // console.log('google available');
         map = new google.maps.Map(
             document.querySelector('#map'), {
                 center: { lat, lng },

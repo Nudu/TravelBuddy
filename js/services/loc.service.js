@@ -16,7 +16,7 @@ function getLocs() {
 }
 
 function getPosition() {
-    console.log('Getting Pos:');
+    console.log('Getting Device Positon:');
     return new Promise((resolve, reject) => {
         navigator.geolocation.getCurrentPosition(resolve, reject)
     })
