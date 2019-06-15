@@ -1,0 +1,13 @@
+@import url(../lib/bs4/css/bootstrap.min.css);
+
+h1 {
+    color: limegreen;
+}
+
+.location-weather {
+    background-color: lightskyblue;
+    text-align: center;
+    width: 40vw;
+    margin: 0 auto;
+    border: 1px solid black;
+}
