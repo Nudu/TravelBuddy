@@ -30,7 +30,7 @@ document.body.onload = () => {
                             document.querySelector('.temp-min').innerHTML = data.main.temp_min+'°'
                             document.querySelector('.temp-max').innerHTML = data.main.temp_max+'°'
                             document.querySelector('.weather-description').innerHTML = data.weather[0].description
-                            document.querySelector('.weather-icon').src = 'http://openweathermap.org/img/w/'+data.weather[0].icon+'.png'
+                            document.querySelector('.weather-icon').src = 'https://openweathermap.org/img/w/'+data.weather[0].icon+'.png'
                             document.querySelector('.pressure').innerHTML = data.main.pressure+' hpa'
                             document.querySelector('.humidity').innerHTML = data.main.humidity+'%'
                             document.querySelector('.wind').innerHTML = data.wind.speed+' m/s '
