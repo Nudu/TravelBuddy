@@ -1,13 +1,39 @@
 @import url(../lib/bs4/css/bootstrap.min.css);
 
+body {
+    text-align: center;
+}
+
 h1 {
     color: limegreen;
+}
+
+#map{
+    margin: 0 auto;
+    width: 50vw; 
+    height: 400px;
+}
+
+.weather-container{
+    background-color: lightskyblue;
+    width: 25vw;
+    height: 25vh;
+    margin: 0 auto;
+}
+
+.loading{
+    margin:auto;
 }
 
 .location-weather {
     background-color: lightskyblue;
     text-align: center;
-    width: 40vw;
+    width: 25vw;
+    height: 25vh;
     margin: 0 auto;
     border: 1px solid black;
+}
+
+.hide{
+    display:none;
 }

@@ -11,10 +11,12 @@ import mapService from './services/map.service.js'
 
 document.body.onload = () => {
     // console.log(locService.locs)
+    document.querySelector('.loading').hidden = false;
     mapService.initMap()
         .then(
             () => {
                 mapService.addMarker({ lat: 32.0672529, lng: 34.7687332 }, 'Nadav\'s House');
+                document.querySelector('.location-weather').hidden = true;
                 locService.getPosition()
                     .then(pos => {
                         console.log(pos.coords);
@@ -34,13 +36,15 @@ document.body.onload = () => {
                             document.querySelector('.pressure').innerHTML = data.main.pressure+' hpa'
                             document.querySelector('.humidity').innerHTML = data.main.humidity+'%'
                             document.querySelector('.wind').innerHTML = data.wind.speed+' m/s '
-                            document.querySelector('.wind-deg').innerHTML = data.wind.deg+'°'
+                            document.querySelector('.loading').hidden = true;
+                            document.querySelector('.location-weather').hidden = false;
+                            // document.querySelector('.wind-deg').innerHTML = data.wind.deg+'°'
                             // document.querySelector('.sun-rise').innerHTML = new Date(data.sys.sunrise).toTimeString().split(' ')[0]
                             // document.querySelector('.sun-set').innerHTML = new Date(data.sys.sunset).toTimeString().split(' ')[0]
                         })
                         // console.log(locService.locs)
                         // panTo(pos.coords.latitude, pos.coords.longitude)
-                        // for Production Stage Only:
+                        // for Production Stage Only:<<<
                         // window.locs = locService.locs
                     })
                     .catch(err => {
